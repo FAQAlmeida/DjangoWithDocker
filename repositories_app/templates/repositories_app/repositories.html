@@ -1,0 +1,26 @@
+{% extends 'home_app/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Repositórios
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'repositories_app/css/style.css' %}">
+{% endblock css %}
+
+{% block body %}
+    <div class="main">
+        <h1 class="main_title">Repositórios</h1>
+        
+        <div id="repos">
+            <div class="loader">
+            <script>show_repositories();</script>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="{% static 'repositories_app/js/github_request.js' %}"></script>
+{% endblock %}
