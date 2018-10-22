@@ -1,3 +1,53 @@
+a{
+    color:black;
+}
+a:hover{
+    color: deeppink;
+}
+
 #search-box{
     float: right;
+}
+
+.main_home{
+    color: black;
+    background: white;
+}
+
+.home_title{
+    text-align: center;
+    margin-top: 2%;
+}
+
+.home_description{
+    margin-top: 15px;
+}
+
+.home_description_title{
+    text-align: center;
+}
+
+.home_description_text{
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.django_logo{
+    width: 5%;
+    float: left;
+    margin-right: 2.5%;
+    margin-bottom: 1px;
+}
+
+.python_logo{
+    width: 5%;
+    float: right;
+    margin-left: 2.5%;
+    margin-bottom: 1px;
+}
+
+.docker_logo{
+    width: 7%;
+    float: right;
+    margin-left: 1%;
 }

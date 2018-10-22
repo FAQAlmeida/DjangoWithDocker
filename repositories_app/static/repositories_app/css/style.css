@@ -66,14 +66,11 @@
     color: black;
 }
 
-a:hover{
-    color: deeppink;
-}
-
 .creation{
     float: right;
 }
 
 .github{
+    color: black;
     font-size: 17px;
 }

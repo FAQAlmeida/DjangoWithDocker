@@ -1,41 +1,135 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
 
     <title>Hello, world!</title>
 </head>
+
 <body>
-<nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a class="navbar-brand" href="">FQA Website</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="">FQA Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02"
+            aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">Repositories</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-md-0" id="search-box">
-            <input class="form-control" type="text" placeholder="Search">
-        </form>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Repositories</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-md-0" id="search-box">
+                <input class="form-control" type="text" placeholder="Search">
+            </form>
+        </div>
+    </nav>
+
+    <div class="main_home">
+        <h1 class="home_title">FQA Website</h1>
+        <div class="container">
+            <div class="home_description">
+                <h3 class="home_description_title">Description</h3>
+                <div class="home_description_text">
+                    <img src="static/images/2000px-Python-logo-notext.svg.png" class="img-fluid rounded-circle python_logo" alt="Python Logo">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non diam nec odio
+                        sollicitudin
+                        pellentesque at sed erat. Fusce a lorem in enim dapibus fermentum. Proin lobortis dui eget
+                        auctor
+                        luctus. Morbi tincidunt erat molestie, consectetur risus eu, accumsan leo. Aenean vitae massa
+                        eget
+                        justo tincidunt ullamcorper vel et neque. Nulla in justo a quam pellentesque dictum. Donec
+                        laoreet
+                        vitae libero nec viverra. Etiam et magna purus. Integer metus enim, eleifend vitae leo vel,
+                        condimentum eleifend libero. Quisque ut ipsum leo. In tristique massa at ipsum elementum, sit
+                        amet
+                        mattis metus commodo. Sed ac interdum sapien. Vestibulum libero nisl, lobortis at mi id, tempor
+                        rutrum turpis. Maecenas eget magna in lorem tempus malesuada. Praesent et nisi volutpat,
+                        bibendum
+                        lacus in, ultricies lectus.
+                    </p>
+                    <img src="static/images/django-logo-png-transparent.png" class="img-fluid rounded-top django_logo" alt="Django Logo">
+                    <p>
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                        Vivamus
+                        ut
+                        tellus efficitur, efficitur enim nec, bibendum augue. In hac habitasse platea dictumst.
+                        Suspendisse
+                        condimentum dui non dui sodales dignissim. Vestibulum commodo sit amet felis pellentesque
+                        fermentum.
+                        Nulla sodales faucibus velit, in pretium metus ullamcorper et. Praesent tortor eros, posuere
+                        quis
+                        justo
+                        ac, viverra tincidunt leo. Proin sapien nisl, sodales sed luctus sit amet, sodales sed enim.
+                        Sed
+                        condimentum sodales libero nec vehicula. Duis dictum erat vel pellentesque sodales. Cras
+                        sollicitudin
+                        semper tempor. Nullam sit amet orci cursus, elementum ex fringilla, iaculis enim. Curabitur
+                        vestibulum
+                        ex at purus ullamcorper imperdiet. Nullam sollicitudin sem eget felis porttitor rutrum.
+                    </p>
+                    <img src="static/images/docker_logo.jpg" class="img-fluid docker_logo" alt="Docker Logo">
+                    <p>
+                        Maecenas quis tincidunt purus, eget feugiat lorem. In vulputate velit quis condimentum
+                        fermentum.
+                        Quisque lectus mi, mollis sit amet urna sit amet, gravida eleifend quam. Proin quis metus eget
+                        tellus euismod porta. Duis vestibulum finibus enim, et mollis lacus bibendum at. Vivamus elit
+                        dolor, vestibulum tristique erat vitae, gravida commodo tellus. Pellentesque elit magna, luctus
+                        nec
+                        tellus id, pharetra congue risus. Curabitur laoreet sapien tempus arcu tempor condimentum.
+                        Suspendisse blandit, sapien et fermentum congue, urna arcu eleifend ante, sit amet imperdiet
+                        justo
+                        odio id elit. Sed sed ornare felis. Aenean pulvinar vel metus non rhoncus. Etiam accumsan ex
+                        eget
+                        augue rutrum aliquam. Nunc fermentum sem eleifend facilisis tincidunt. Donec malesuada dapibus
+                        quam
+                        eget placerat.
+                    </p>
+                    <p>
+                        Pellentesque convallis dignissim felis vel porttitor. Sed lacus enim, faucibus a libero ac,
+                        pharetra ultricies augue. Vivamus lobortis quam id ex maximus semper. Nunc dolor nibh, dapibus
+                        sit
+                        amet cursus a, accumsan in ante. Pellentesque nec dui venenatis, tempor magna quis, tempus
+                        metus.
+                        Cras malesuada malesuada lectus, quis facilisis metus tempus non. Ut id molestie ante, suscipit
+                        ornare tellus. Integer ultrices, felis non congue sagittis, enim turpis ultrices nunc, id
+                        condimentum nisl massa at quam. Maecenas blandit sed sapien ac finibus. Sed sit amet dolor in
+                        velit
+                        sodales aliquam. Ut cursus arcu id tempor fermentum. Ut lobortis leo nunc, sed euismod lorem
+                        rhoncus quis. Nunc erat lorem, fermentum nec interdum pulvinar, sagittis eget dolor.
+                        Pellentesque
+                        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    </p>
+                    <p>
+                        Etiam feugiat aliquam lacus sit amet imperdiet. Quisque mauris eros, sollicitudin at felis non,
+                        bibendum dapibus justo. Duis vehicula euismod dui ac condimentum. Duis ultrices ac.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-</nav>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
