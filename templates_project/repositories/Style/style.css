@@ -19,10 +19,11 @@
     100% { transform: rotate(360deg); }
 }
 
-#repos{
+.repos{
     padding-left: 1%;
     padding-top: 15px;
     padding-right: 1%;
+    width: 100%;
 }
 
 .main_title{
@@ -33,7 +34,7 @@
 .my_panel_group{
     margin-bottom: 2%;
     border: 1px solid black;
-    border-radius: 32px;
+    border-radius: 10px;
 }
 
 .my_panel{
@@ -52,7 +53,7 @@
 }
 
 .my_description{
-    font-size: 25px;
+    font-size: 20px;
     margin: 1px;
 }
 
@@ -67,4 +68,14 @@ a:hover{
 
 .creation{
     float: right;
+}
+
+.my_column{
+    background: lightgray;
+    margin: auto;
+}
+
+.my_row{
+    background: gray;
+    width: 100%;
 }

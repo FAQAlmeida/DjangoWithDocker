@@ -38,9 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'home_app.apps.HomeAppConfig',
     'api_app.apps.ApiAppConfig',
     'repositories_app.apps.RepositoriesAppConfig',
+    'spotify_app.apps.SpotifyAppConfig',
+    'home_app.apps.HomeAppConfig',
 ]
 
 MIDDLEWARE = [
@@ -81,16 +82,15 @@ WSGI_APPLICATION = 'django_docker_app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'postgres',
-#         'USER': 'postgres',
-#         'HOST': 'db',
-#         'PORT': '5432'
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'db',
+        'PORT': '5432'
+    }
+}
 
 
 # Password validation

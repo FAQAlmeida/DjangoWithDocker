@@ -12,7 +12,7 @@ function show_repositories() {
               const reposJSON = JSON.parse(this.responseText);
               document.getElementById("collapse_repo_x").innerHTML = mount_repos_html(reposJSON);
           }catch (e) {
-              document.getElementById("collapse_repo_x").innerText = "Error: {0}".format(e.toString())
+              document.getElementById("collapse_repo_x").innerText = "Error: {0}".format(e.toString());
           }
           // saveText(JSON.stringify(reposJSON), "reposJson.json");
           console.log(this.responseText);
@@ -29,7 +29,7 @@ function show_readme(repository, id) {
                 const readmeJSON = JSON.parse(this.responseText);
                 document.getElementById(id).innerHTML = readmeJSON.content;
             }catch (e) {
-                document.getElementById(id).innerText = "Error: {0}".format(e.toString())
+                document.getElementById(id).innerText = "Error: {0}".format(e.toString());
             }
             // saveText(JSON.stringify(readmeJSON), "readmeJSON.json");
             console.log(this.responseText);
@@ -43,7 +43,7 @@ String.prototype.format = function () {
     for (let k in arguments) {
         a = a.replace(new RegExp("\\{" + k + "\\}", 'g'), arguments[k]);
     }
-    return a
+    return a;
 };
 
 function mount_repos_html(repos_github_json) {
@@ -54,6 +54,10 @@ function mount_repos_html(repos_github_json) {
         let description = repos_github_json[i].description;
         let language = repos_github_json[i].language;
         let id = repositorio + i;
+        let row_pat =  
+            "<div class='row my_row'>"+
+                "{0}"+
+            "</div>";
         let pattern =
             "<div class='panel-group'>" +
                 "<div class='panel panel-default'>" +
@@ -70,6 +74,7 @@ function mount_repos_html(repos_github_json) {
                 "</div>" +
             "</div>";
         pattern = pattern.format(id, repositorio, description, html_url, language);
+        pattern = (i % 3 == 0) ? row_pat.format(pattern) : pattern;
         html_response += pattern;
     }
     return html_response;

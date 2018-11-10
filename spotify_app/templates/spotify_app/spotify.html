@@ -1,0 +1,14 @@
+{% extends 'home_app/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Spotify
+{% endblock title %}
+
+{% block body %}
+Hello Spotify
+<form action="{% url 'Spotify:spotify_auth_view' %}" method="get">
+    <button type="submit" value="submit">Click 1</button>
+</form>
+{% endblock body %}

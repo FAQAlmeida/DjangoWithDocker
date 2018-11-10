@@ -11,16 +11,20 @@ Repositórios
 {% endblock css %}
 
 {% block body %}
-    <div class="main">
-        <h1 class="main_title">Repositórios</h1>
-        
-        <div id="repos">
+<div class="main">
+    <h1 class="main_title">Repositórios</h1>
+
+    <div class="container">
+        <div class="repos" id="repos">
             <div class="loader">
-            <script>show_repositories();</script>
+                <script>
+                    show_repositories();
+                </script>
+            </div>
         </div>
     </div>
-{% endblock %}
+    {% endblock %}
 
-{% block js %}
+    {% block js %}
     <script type="text/javascript" src="{% static 'repositories_app/js/github_request.js' %}"></script>
-{% endblock %}
+    {% endblock %}

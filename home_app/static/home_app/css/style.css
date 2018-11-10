@@ -51,3 +51,8 @@ a:hover{
     float: right;
     margin-left: 1%;
 }
+
+html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}
