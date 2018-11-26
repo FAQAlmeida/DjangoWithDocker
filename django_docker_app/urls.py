@@ -22,4 +22,6 @@ urlpatterns = [
     path('', include("home_app.urls")),
     path('repositories/', include("repositories_app.urls")),
     path('api/', include("api_app.urls")),
+    path('spotify/', include("spotify_app.urls")),
+    path('contact/', include("contact_app.urls")),
 ]

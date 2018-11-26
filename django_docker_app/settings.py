@@ -38,9 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'home_app.apps.HomeAppConfig',
     'api_app.apps.ApiAppConfig',
     'repositories_app.apps.RepositoriesAppConfig',
+    'spotify_app.apps.SpotifyAppConfig',
+    'home_app.apps.HomeAppConfig',
+    'contact_app.apps.ContactAppConfig'
 ]
 
 MIDDLEWARE = [
@@ -81,16 +83,16 @@ WSGI_APPLICATION = 'django_docker_app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'postgres',
-#         'USER': 'postgres',
-#         'HOST': 'db',
-#         'PORT': '5432'
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgress',
+        'USER': 'postgress',
+        'PASSWORD': 'postgress',
+        'HOST': 'db',
+        'PORT': '5432'
+    }
+}
 
 
 # Password validation
@@ -132,3 +134,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'otavioalmeida650@gmail.com'
+EMAIL_HOST_PASSWORD = 'zdhotvcgduboebgz'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

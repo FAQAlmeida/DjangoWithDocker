@@ -1,0 +1,27 @@
+{% extends 'home_app/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Spotify
+{% endblock title %}
+
+{% block body %}
+<div class="main">
+    <h1 class="main_title">Spotify</h1>
+    <h5 class="main_description">
+        Aqui estão todas as músicas que eu venho escutando nos últimos tempos 🎵<br>
+        Não julgue❗
+    </h5>
+    <div class="container musics">
+    {% include 'spotify_app/music_list.html' with music_list=data %}
+    </div>
+</div>
+{% endblock body %}
+
+{% block css %}
+<link rel='stylesheet' href="{% static 'spotify_app/css/style.css' %}">
+{% endblock css %}
+{% block js_down %}
+<script src="{% static 'spotify_app/js/script.js' %}"></script>
+{% endblock js_down %}

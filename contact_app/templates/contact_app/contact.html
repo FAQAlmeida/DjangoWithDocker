@@ -1,0 +1,25 @@
+{% extends 'home_app/base.html' %}
+{% load staticfiles %}
+{% block title %}
+Contact
+{% endblock title %}
+{% block body %}
+<div class="container main">
+    <h1 class="main_title">Contato</h1>
+    <h5 class="main_description">
+        Sinta-se à vontade para me escrever qualquer coisa 💞<br>
+        Dúvidas, sugestões, críticas 😆
+    </h5>
+    <form class="contact_form" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="my-actions">
+            <button type="submit">Send</button>
+        </div>
+    </form>
+</div>
+{% endblock body %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'contact_app/css/style.css' %}">
+{% endblock css %}

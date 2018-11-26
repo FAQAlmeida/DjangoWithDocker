@@ -1,0 +1,42 @@
+.main {
+    margin-top: 10px;
+    margin-bottom: 60px;
+    width: 100%;
+    align-content: center;
+}
+
+
+label {
+    display: inline-block;
+    clear: left;
+    text-align: right;
+    width: 15%;
+}
+
+input,
+textarea,
+button {
+    margin-left: 1%;
+    display: inline-block;
+}
+
+.my-actions {
+    transform: translateX(-79%);
+    text-align: right;
+    width: 100%;
+}
+
+.contact_form{
+    margin-top: 20px;
+}
+
+.main_title {
+    text-align: center;
+}
+
+.main_description {
+    color: white;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
