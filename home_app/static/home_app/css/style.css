@@ -1,58 +1,97 @@
-#search-box{
-    border-radius: 10px;
-}
-a{
-    color: black;
+/* html css*/
+html {
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+    position: sticky;
+    min-height: 100%;
 }
 
-a:hover{
+/* body css*/
+body {
+    background: linear-gradient(60deg, black, black 55%, lime);
+    background-attachment: fixed;
+    padding-bottom: 60px;
+}
+
+/* navbar css */
+#search-box {
+    border-radius: 10px;
+}
+
+.navbar-custom {
+    background-color: transparent;
+}
+
+.navbar-custom .navbar-brand {
+    color: rgba(255, 255, 255, .9);
+}
+
+.navbar-custom .navbar-brand:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: rgb(255, 255, 255, .7);
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler .navbar-toggler-icon:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.nav_logo {
+    height: auto;
+    width: 10%;
+}
+
+/* text css */
+
+a:hover {
     color: deeppink;
 }
 
-.main_home{
-    color: black;
-    background: white;
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+    font-family: 'K2D', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.home_title{
+/* footer css */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    line-height: 60px;
+    background-color: transparent;
+}
+
+.copyright_text {
+    font-weight: bold;
     text-align: center;
-    margin-top: 2%;
+    color: #ffffff;
 }
 
-.home_description{
-    margin-top: 15px;
+.icon_footer {
+    display: block;
+    color: white;
 }
 
-.home_description_title{
-    text-align: center;
-}
-
-.home_description_text{
-    margin-top: 20px;
-    text-align: justify;
-}
-
-.django_logo{
-    width: 5%;
-    float: left;
-    margin-right: 2.5%;
-    margin-bottom: 1px;
-}
-
-.python_logo{
-    width: 5%;
-    float: right;
-    margin-left: 2.5%;
-    margin-bottom: 1px;
-}
-
-.docker_logo{
-    width: 7%;
-    float: right;
-    margin-left: 1%;
-}
-
-html {
-    overflow: -moz-scrollbars-vertical; 
-    overflow-y: scroll;
+.icon_footer:hover {
+    color: deeppink;
 }

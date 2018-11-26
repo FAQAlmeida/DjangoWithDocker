@@ -121,8 +121,14 @@ function mount_repos_html(repos_github_json) {
             "<div id='{0}desc' class='panel-body my_description'><p>{2}</p>" +
             "</div>" +
             "<div class='panel-footer my_footer'>" +
-            "<p class='creation'>Criado em: {5}</p>" +
+            "<div class='row'>" +
+            "<div class='col'>" +
             "<a class='github' href='{3}' target='_blank' title='{1}'>GitHub: {1}</a>" +
+            "</div>" +
+            "<div class='col text-right'>" +
+            "<p class='creation'>Criado em: {5}</p>" +
+            "</div>" +
+            "</div>" +
             "</div>" +
             "</div>" +
             "</div>" +

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'repositories_app.apps.RepositoriesAppConfig',
     'spotify_app.apps.SpotifyAppConfig',
     'home_app.apps.HomeAppConfig',
+    'contact_app.apps.ContactAppConfig'
 ]
 
 MIDDLEWARE = [
@@ -85,8 +86,9 @@ WSGI_APPLICATION = 'django_docker_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
+        'NAME': 'postgress',
+        'USER': 'postgress',
+        'PASSWORD': 'postgress',
         'HOST': 'db',
         'PORT': '5432'
     }
@@ -132,3 +134,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'otavioalmeida650@gmail.com'
+EMAIL_HOST_PASSWORD = 'zdhotvcgduboebgz'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

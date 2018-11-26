@@ -12,11 +12,6 @@
     animation: spin 2s linear infinite;
 }
 
-.main {
-    font-family: 'K2D', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    background: white;
-}
-
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -28,6 +23,7 @@
 }
 
 .repos {
+    padding-bottom: 100px;
     padding-left: 1%;
     padding-top: 15px;
     padding-right: 1%;
@@ -35,14 +31,30 @@
 }
 
 .main_title {
+    color: white;
     text-align: center;
-    background: white;
+}
+
+.main_description {
+    color: white;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .my_panel_group {
+    background: white;
     margin-bottom: 2%;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 10px;
+}
+
+.my_repository,
+.language,
+.my_description>p,
+.github,
+.creation {
+    color: black;
 }
 
 .my_panel {

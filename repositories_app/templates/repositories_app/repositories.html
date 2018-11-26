@@ -13,7 +13,10 @@ Repositórios
 {% block body %}
 <div class="main">
     <h1 class="main_title">Repositórios</h1>
-
+    <h5 class="main_description">
+        Aqui estão todos os meus repositórios que eu desenvolvi ao longos dos últimos 2 anos.<br>
+        Pelo menos os maiores😬
+    </h5>
     <div class="container">
         <div class="repos" id="repos">
             <div class="loader">
@@ -23,8 +26,9 @@ Repositórios
             </div>
         </div>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
 
-    {% block js %}
-    <script type="text/javascript" src="{% static 'repositories_app/js/github_request.js' %}"></script>
-    {% endblock %}
+{% block js %}
+<script type="text/javascript" src="{% static 'repositories_app/js/github_request.js' %}"></script>
+{% endblock %}

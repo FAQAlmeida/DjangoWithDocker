@@ -1,0 +1,152 @@
+.main_title {
+    text-align: center;
+}
+
+.main_description {
+    color: white;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.banner {
+    border: solid 1px white;
+    position: relative;
+    display: inline-table;
+    margin: 2%;
+    width: 190px;
+    opacity: 1;
+}
+
+.overlay {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #ffffff;
+}
+
+.banner .overlay:hover {
+    opacity: .3;
+}
+
+.upper {
+    margin: 0;
+}
+
+.musics {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.count {
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    background: rgba(0, 0, 0, 0.9);
+    display: inline-block;
+    max-width: 40px !important;
+    padding: 0;
+}
+
+.name_music {
+    border: solid 0.5px white;
+    width: 190px;
+    height: 50px;
+    color: white;
+    padding-right: 3%;
+    padding-left: 3%;
+    background: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    position: relative;
+}
+
+.name_music a {
+    display: -webkit-inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    cursor: pointer;
+}
+
+.scroll-up a {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    /* Starting position */
+    -moz-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    /* Apply animation to this element */
+    -moz-animation: scroll-up 4s linear infinite;
+    -webkit-animation: scroll-up 4s linear infinite;
+    animation: scroll-up 4s linear infinite;
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes scroll-up {
+    0% {
+        -moz-transform: translateY(0%);
+    }
+
+    100% {
+        -moz-transform: translateY(-100%);
+    }
+}
+
+@-webkit-keyframes scroll-up {
+    0% {
+        -webkit-transform: translateY(0%);
+    }
+
+    100% {
+        -webkit-transform: translateY(-100%);
+    }
+}
+
+@keyframes scroll-up {
+    0% {
+        -moz-transform: translateY(0%);
+        /* Browser bug fix */
+        -webkit-transform: translateY(0%);
+        /* Browser bug fix */
+        transform: translateY(0%);
+    }
+
+    100% {
+        -moz-transform: translateY(-100%);
+        /* Browser bug fix */
+        -webkit-transform: translateY(-100%);
+        /* Browser bug fix */
+        transform: translateY(-100%);
+    }
+}
+
+.count p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.album_image img {
+    width: 150px;
+    height: 150px;
+}
+
+.details {
+    padding: 0;
+    min-width: 150px;
+    min-height: 150px;
+}
