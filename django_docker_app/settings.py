@@ -86,9 +86,9 @@ WSGI_APPLICATION = 'django_docker_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgress',
-        'USER': 'postgress',
-        'PASSWORD': 'postgress',
+        'NAME': 'web_server_db',
+        'USER': 'otavio',
+        'PASSWORD': 'Smile@435BMI',
         'HOST': 'db',
         'PORT': '5432'
     }
@@ -135,8 +135,5 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'otavioalmeida650@gmail.com'
-EMAIL_HOST_PASSWORD = 'zdhotvcgduboebgz'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp'
+EMAIL_PORT = 25

@@ -18,6 +18,5 @@ class ContactView(FormView):
         return super().form_valid(form)
 
 class SuccessView(generic.View):
-    template_name = "contact_app/success.html"
     def get(self, request):
-        return render(request, self.template_name)
+        return redirect("Contact:contact")

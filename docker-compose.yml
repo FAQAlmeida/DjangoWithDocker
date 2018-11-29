@@ -1,27 +1,51 @@
 version: '3'
 
 services:
+  smtp:
+    image: namshi/smtp
+    container_name: smtp_relay
+    restart: always
+    ports:
+     - "25:25"
+    environment:
+      GMAIL_USER: otavioalmeida650@gmail.com
+      GMAIL_PASSWORD: zdhotvcgduboebgz
+
   db:
     image: postgres
+    container_name: database
     restart: always
     environment:
-      POSTGRES_DB: postgress
-      POSTGRES_USER: postgress
-      POSTGRES_PASSWORD: postgress
+      POSTGRES_DB: web_server_db
+      POSTGRES_USER: otavio
+      POSTGRES_PASSWORD: Smile@435BMI
       POSTGRES_DATA: /var/lib/postgresql/data/pgdata
     volumes:
       - db-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+
   web:
     build: .
+    container_name: web_service
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
       - "8000:8000"
     depends_on:
+      - adminer
       - db
+      - smtp
 
 volumes:
   db-data:

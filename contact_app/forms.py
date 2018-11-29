@@ -1,6 +1,10 @@
 from django import forms
 from django.core.mail import send_mail as s_e
-from django.core.mail import EmailMessage
+from django.core.mail import EmailMultiAlternatives
+from django.template import Context
+from django.template.loader import render_to_string
+
+import json
 
 
 class ContactEmail(forms.Form):
@@ -14,16 +18,22 @@ class ContactEmail(forms.Form):
     )
 
     def send_email(self):
-        # send email using the self.cleaned_data dictionary
-        email = EmailMessage()
+        email = EmailMultiAlternatives()
         name = self.cleaned_data["contact_name"]
         content = self.cleaned_data["content"]
         from_email = self.cleaned_data["contact_email"]
         subject = self.cleaned_data["subject"]
-        email.body = content
+
+        context = {"data": {"name": name,
+                            "content": content, "from": from_email}}
+
+        template_text = render_to_string("contact_app/email.txt", context)
+        template_html = render_to_string("contact_app/email.html", context)
+
+        email.reply_to = [from_email]
         email.subject = subject
         email.from_email = f"{name} <{from_email}>"
         email.to = ["otavioalmeida650@gmail.com"]
-        email.extra_headers = {"labelIds": ["CATEGORY_SOCIAL"]}
+        email.body = template_text
+        email.attach_alternative(template_html, "text/html")
         email.send()
-

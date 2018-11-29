@@ -1,6 +1,7 @@
 .main {
     margin-top: 10px;
     margin-bottom: 60px;
+    padding-bottom: 20px;
     width: 100%;
     align-content: center;
 }
@@ -13,6 +14,10 @@ label {
     width: 15%;
 }
 
+input, textarea{
+    width: 60%;
+}
+
 input,
 textarea,
 button {
@@ -21,13 +26,18 @@ button {
 }
 
 .my-actions {
-    transform: translateX(-79%);
-    text-align: right;
+    text-align: left;
     width: 100%;
 }
 
+.my-actions > button{
+    width: 60%;
+    margin-left: 16.3%;
+}
+
 .contact_form{
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-left: 5%;
 }
 
 .main_title {
