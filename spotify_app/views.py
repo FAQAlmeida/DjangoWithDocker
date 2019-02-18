@@ -21,16 +21,16 @@ class SpotifyView(generic.View):
         try:
             token = AccessToken.objects.first()
         except ObjectDoesNotExist:
-            redirect(resolve_url("Spotify:spotify_auth_view"))
+            return redirect(resolve_url("Spotify:spotify_auth_view"))
         
-        if not token or token == None:
-            redirect(resolve_url("Spotify:spotify_auth_view"))
+        if not token:
+            return redirect(resolve_url("Spotify:spotify_auth_view"))
 
-        if token.expires_in <= timezone.now():
+        if token and token.expires_in <= timezone.now():
             rt = auth.RefreshingToken(token)
             rt.update_token()
             token = AccessToken.objects.get(pk=token.pk)
-
+        
         data = auth.GetData(token).data
 
         http_resp = render(request, self.template_name,

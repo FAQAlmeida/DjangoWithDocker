@@ -19,6 +19,7 @@ class ContactEmail(forms.Form):
 
     def send_email(self):
         email = EmailMultiAlternatives()
+        
         name = self.cleaned_data["contact_name"]
         content = self.cleaned_data["content"]
         from_email = self.cleaned_data["contact_email"]
